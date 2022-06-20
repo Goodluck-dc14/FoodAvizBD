@@ -1,9 +1,15 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 port = process.env.PORT || 3000;
-const url = "mongodb://localhost/FoodAvizDB";
+const uri = process.env.URI;
 
-mongoose.connect(url).then(() => {
-  console.log("database connected...");
-});
+mongoose
+  .connect(uri)
+  .then(() => {
+    console.log("database connected...");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 module.exports = mongoose;
