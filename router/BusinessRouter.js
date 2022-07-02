@@ -5,7 +5,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-router.get("/", async (req, res) => {
+router.get("/users", async (req, res) => {
   try {
     const findUser = await BusinessSchema.find();
 
