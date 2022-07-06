@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 port = process.env.PORT || 3000;
-const ATLAS = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose
-  .connect(ATLAS)
+  .connect(MONGODB_URI)
   .then(() => {
     console.log("database connected...");
   })
