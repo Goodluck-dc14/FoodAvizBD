@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome to FoodAviz API");
+  res.send("Welcome to FoodAviz server");
 });
 
 app.use("/api", router);
