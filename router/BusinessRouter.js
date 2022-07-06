@@ -8,7 +8,6 @@ const jwt = require("jsonwebtoken");
 router.get("/users", async (req, res) => {
   try {
     const findUser = await BusinessSchema.find();
-
     res.status(200).json({
       message: "users found",
       totalUsers: findUser.length,
