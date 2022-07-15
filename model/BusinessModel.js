@@ -3,22 +3,18 @@ const BusinessSchema = mongoose.Schema(
   {
     fullName: {
       type: String,
-      required: true,
     },
     userName: {
       type: String,
-      required: true,
     },
     phoneNumber: {
       type: Number,
     },
     address: {
       type: String,
-      required: true,
     },
     order: {
       type: String,
-      required: true,
     },
     email: {
       type: String,

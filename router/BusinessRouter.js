@@ -143,8 +143,12 @@ router.post("/create", async (req, res) => {
     const hPass = await bcrypt.hash(req.body.password, hSalt);
 
     const createUser = await BusinessSchema.create({
+      fullName: req.body.fullName,
       userName: req.body.userName,
+      phoneNumber: req.body.phoneNumber,
       email: req.body.email,
+      address: req.body.address,
+      order: req.body.order,
       password: hPass,
     });
 
