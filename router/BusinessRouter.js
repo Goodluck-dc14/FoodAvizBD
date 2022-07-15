@@ -154,7 +154,7 @@ router.post("/create", async (req, res) => {
 
     res.status(201).json({ message: "user created", data: createUser });
   } catch (err) {
-    res.status(400).json({ message: "can't do this operation" });
+    res.status(404).json({ message: "can't do this operation" });
   }
 });
 
